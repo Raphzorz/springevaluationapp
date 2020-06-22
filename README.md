@@ -1,2 +1,2 @@
 # springevaluationapp
- A simple evaluation app built with Java Spring & Angular
+ A simple e-commerce app built with Java Spring & Angular
