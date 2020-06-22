@@ -1,0 +1,93 @@
+/* Red border araound input boxes*/
+.error-class {
+  border: 1px solid red;
+}
+
+/*Triggered when checkbox is clicked*/
+.selected-class {
+  background: #A0EBC4;
+}
+
+/*Button stuff*/
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #2D5358;
+  padding: 7px 40px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #2F8075;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:enabled:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+
+.btn:hover:enabled:after {
+  opacity: 0;
+}
+
+.table tr {
+  border: 1px solid #fff;
+  transition: background-color .8s linear;
+}
+
+/*Checkboxes*/
+
+.custom-control-input-green:focus ~ .custom-control-label::before {
+  border-color: #28a745 !important;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+}
+
+.custom-control-input-green:checked ~ .custom-control-label::before {
+  border-color: #28a745 !important;
+  background-color: #2F8075 !important;
+}
+
+.custom-control-input-green:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: #2F8075 !important;
+}
+
+.custom-control-input-green:not(:disabled):active ~ .custom-control-label::before {
+  background-color: #2F8075 !important;
+  border-color: #2F8075 !important;
+}
+
+/*Table stuff*/
+
+table td {
+
+  font-size: medium;
+}

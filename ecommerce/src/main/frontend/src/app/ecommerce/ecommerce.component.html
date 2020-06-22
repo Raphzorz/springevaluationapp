@@ -1,0 +1,30 @@
+<!--This component is the main layout of the page-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Raphael Ellul Falzon</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation" (click)="toggleCollapsed()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarResponsive" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <app-shopping-cart (onBasketFinished)=finishBasket($event) #shoppingCartC
+                             [hidden]="basketFinished"></app-shopping-cart>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-md-12">
+    <app-products #productsC [hidden]="basketFinished"></app-products>
+  </div>
+  <div class="col-md-3">
+
+  </div>
+  <div class="col-md-6 offset-3">
+    <app-baskets #basketsC [hidden]="!basketFinished"></app-baskets>
+  </div>
+</div>
